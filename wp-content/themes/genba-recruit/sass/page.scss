@@ -1,0 +1,1045 @@
+// compileNested: ../$1.css
+
+@import "theme-function";
+
+/*--------------------------------------------------------------
+# Common
+--------------------------------------------------------------*/
+
+.box-ttl{
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 1.5em auto;
+  @media only screen and (max-width: $max-width ) {
+    width: 90%;
+    margin: 1.5em auto;
+  }
+  &.ttl-white{
+    color:#fff;
+  }
+}
+.box-img{
+  .box-img-caption{
+    background: $gray-color;
+    text-align: left;
+    padding: 0.5em;
+    margin: 0 0 0.5em 0 ;
+    P{
+      margin: 0;
+    }
+  }
+}
+.img1-box{
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  @media only screen and (min-width: 900px ) {
+    max-width: 760px;
+  }
+}
+.img2-box{
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  @media only screen and (min-width: $min-width ) {
+    display: flex;
+    img{
+      width: 50%;
+    }
+  }
+  @media only screen and (min-width: 900px ) {
+    max-width: 760px;
+  }
+  img{
+    display: inline-block;
+    margin: 0 0 1em 0;
+    padding: 0;
+  }
+}
+.box-center{
+  text-align: center;
+  margin: 1em auto;
+}
+.box-2em{
+  margin:2em auto;
+}
+.box-1{
+  width: 90%;
+  margin: 0 auto;
+  @media only screen and (min-width: 900px ) {
+    width: 760px;
+  }
+}
+.box-2{
+    width: 90%;
+    margin: 0 auto;
+  @media only screen and (min-width: $min-width ) {
+    display: flex;
+    width: 760px;
+    max-width: 90%;
+    .box-child{
+      width: 46%;
+      margin: 1% 2%;
+      &.box-child-40{
+        width: 36%;
+        margin: 1% 2%;
+      }
+      &.box-child-60{
+        width: 56%;
+        margin: 1% 2%;
+      }
+      &.box-child-30{
+        width: 26%;
+        margin: 1% 2%;
+      }
+      &.box-child-70{
+        width: 66%;
+        margin: 1% 2%;
+      }
+    }
+  }
+}
+.box-3{
+    width: 90%;
+    margin: 0 auto;
+  @media only screen and (min-width: $min-width ) {
+    display: flex;
+    align-items: stretch;
+    .box-child, .box-child-card{
+      width: 31%;
+      margin: 1% 1%;
+    }
+  }
+  @media only screen and (min-width: 900px ) {
+    width: 760px;
+  }
+  @media only screen and (max-width: $max-width ) {
+    .box-child, .box-child-card{
+      margin: 1% 1%;
+    }
+  }
+}
+.box-child{
+  .box-child-img{
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.box-child-card{
+  background: $gray-color;
+  .box-child-txt{
+    padding: 0.5em;
+    margin: 0;
+  }
+  .box-child-ttl{
+    background: $main-color;
+    color: #fff;
+    text-align: center;
+    font-weight:  normal;
+    padding: 0.5em 0;
+    margin: 0 auto;
+  }
+  &.box-child-card-even{
+    background: rgba($gray-color,0.9);
+    .box-child-ttl{
+      background: rgba($main-color,0.9);
+    }
+  }
+}
+.box-nomargin{
+  margin: 0 auto;
+  img{
+    vertical-align: bottom;
+  }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-content{
+  .about-box{
+    margin: 1em auto;
+    padding: 1em 0 2em 0;
+  }
+  .about1{
+    text-align: center;
+  }
+  .about2{
+    background: url(./images/about/bg_about02.jpg) center top no-repeat;
+    background-size: cover;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+  }
+  .about3{
+    @media only screen and (min-width: $min-width ) {
+      .box-3{
+        align-items: stretch;
+        .box-child-card{
+          width: 33%;
+          margin:0;
+          &:last-child{
+            width: 34%;
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: 900px ) {
+      width: 760px;
+    }
+  }
+  .about4{
+    background: url(./images/about/bg_about04.jpg) center top no-repeat;
+    background-size: cover;
+    .box-2, .box-3{
+      align-items: flex-end;
+    }
+    @media only screen and (max-width: $max-width ) {
+      .graf01{
+        width: 70%;
+        margin: 1em auto;
+      }
+      .graf02{
+        width: 80%;
+        margin: 1em auto;
+      }
+      .graf03, .graf04, .graf05{
+        width: 70%;
+        margin: 1em auto;
+      }
+      .graf06{
+        width: 80%;
+        margin: 1em auto;
+      }
+      .graf07{
+        width: 83%;
+        margin: 1em auto;
+      }
+      .graf08{
+        width: 78%;
+        margin: 1em auto;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# job
+--------------------------------------------------------------*/
+.job-content{
+  .job-box{
+    margin: 1em auto;
+    padding: 1em 0 2em 0;
+  }
+  .job1{
+    .box-1{
+      @media only screen and (min-width: $min-width) {
+        max-width: 1200px;
+        width: 100%;
+        .box-child-txt{
+          width: 90%;
+          max-width: 760px;
+          margin: 1em auto;
+        }
+      }
+    }
+  }
+  .job2{
+    margin: 1em auto 0 auto;
+    background: url(./images/job/img_job02.jpg) 65% top no-repeat;
+    background-size: cover;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0 0 rgba(0,0,1px,0.6);
+    .box-1{
+      @media only screen and (min-width: 1120px ) {
+        width: 900px;
+        max-width: 100%;
+      }
+    }
+    .box-child{
+      h2{
+        text-align: left;
+        margin: 1em 0;
+        width: 100%;
+      }
+    }
+  }
+  .job3{
+    margin: 0 auto 1em auto;
+    background: url(./images/job/bg_job03.png) center top no-repeat;
+    text-align: center;
+  }
+  .job4{
+    .box{
+      padding: 2em 0;
+    }
+    .box-odd{
+      background: $gray-color;
+      .box-2{
+        flex-direction:row-reverse;
+      }
+    }
+    .box-ttl{
+      margin: 0.3em auto;
+    }
+    .box-subttl{
+      font-size: 0.9em;
+      text-align: center;
+      letter-spacing: 0.2em;
+      margin: 0 auto 1em auto;
+    }
+    .box-child-txt{
+      p{
+        margin: 0 0 0.3em 0;
+        font-size: 0.9em;
+      }
+    }
+  }
+  .job5{
+    width: 100%;
+    margin: 0 0 -30px 0;
+    padding: 0;
+    text-align: center;
+    @media only screen and (min-width: $min-width ) {
+      margin: 0 0 -38px 0;
+      text-align: left;
+      .box-2{
+        flex-direction: row-reverse;
+      }
+    }
+    .box-ttl{
+      margin: 0.5em 0;
+      width: 100%;
+    }
+    .btn{
+      margin-bottom: 2em;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# step
+--------------------------------------------------------------*/
+.step-content{
+  .step-box{
+    margin: 1em auto;
+    padding: 1em 0 2em 0;
+  }
+  .step1{
+    padding: 1em 0 0 0;
+    margin: 1em auto 0 auto;
+    .box-2{
+      @media only screen and (min-width: $min-width) {
+        max-width: 900px;
+        width: 90%;
+      }
+    }
+    .box-1{
+      margin-bottom: -8px;
+    }
+  }
+  .step2{
+    padding: 0 0 1em 0 0 0;
+    margin: 0 auto 1em auto;
+    background: url(./images/step/img_step03.png) center top no-repeat;
+    background-size: cover;
+    color: #fff;
+    .box-2{
+      align-items: center;
+      p{
+        margin: 0 auto 1em auto ;
+      }
+      .box-child-card{
+        margin-bottom: 1.6em;
+      }
+    }
+  }
+  .step3{
+    .box-child-img{
+      @media only screen and (min-width: $min-width) {
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# company
+--------------------------------------------------------------*/
+.company-content{
+  .company-box{
+    margin: 1em auto;
+    padding: 1em 0 2em 0;
+  }
+  .box-even{
+    background: $gray-color;
+    .box-2{
+      flex-direction: row-reverse;
+    }
+  }
+  .box-2{
+    p{
+      margin: 0 0 1em 0 ;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# career
+--------------------------------------------------------------*/
+
+.tab-list{
+  border: 1px solid $gray-color;
+  border-radius: 10px;
+  .tab-btn{
+    border-radius: 10px;
+    overflow: hidden;
+    @media only screen and (min-width: $min-width ) {
+      display: flex;
+      justify-content: space-around;
+      .tab-btn-item{
+        border-left: 1px solid $gray-color;
+        &:first-child{
+          border-left: none;
+        }
+      }
+    }
+    @media only screen and (max-width: $max-width ) {
+      .tab-btn-item{
+        border-top: 1px solid $gray-color;
+        &:first-child{
+          border-top: none;
+        }
+      }
+    }
+    .tab-btn-item{
+      background: $gray-color;
+      width: 100%;
+      text-align: center;
+      padding: 1em 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      &.select{
+        background: $main-color;
+        color:#fff ;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# member
+--------------------------------------------------------------*/
+.member-content{
+  .member-box{
+    margin: 1em auto;
+    padding: 1em 0 2em 0;
+  }
+  .member1{
+    .box-img{
+      .box-img-txt{
+        p{
+          margin: 0.5em 0;
+        }
+        .box-img-ttl{
+          font-size: 1.1em;
+          text-align: justify;
+        }
+        .box-img-name{
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+      }
+      @media only screen and (min-width: $min-width ) {
+        position: relative;
+        .box-img-txt{
+          position: absolute;
+          width: 320px;
+          background: rgba($bg-color,0.7);
+          padding: 1.5em;
+          color: #fff;
+          top: 1.5em;
+          left: 2em;
+        }
+      }
+    }
+  }
+}
+.list-member{
+  background: $gray-color;
+  .list-member-content{
+    width: 100%;
+    margin: 2em auto 0 auto;
+    display: flex;
+    @media only screen and (min-width: $min-width ) {
+      width: 760px;
+      max-width: 90%;
+      .list-member-item-odd{
+        background: $main-color;
+      }
+      .list-member-item-even{
+        background: lighten($main-color,5%);
+      }
+      .list-member-item-ttl{
+        letter-spacing: -0.1em;
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+    }
+    a{
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      color: #fff;
+    }
+  }
+}
+.list-member-sp{
+  margin: 2em auto 0  auto ;
+  .box-1{
+    position: relative;
+    margin: 0 auto 0.5em auto;
+    max-height: 150px;
+    overflow: hidden;
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      img{
+        vertical-align: bottom;
+        width: 100%;
+      }
+      .link-ttl{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1.5em;
+        bottom: 0;
+        left: 0;
+        background: rgba($main-color,0.8);
+      }
+    }
+
+  }
+}
+
+/*--------------------------------------------------------------
+# interview
+--------------------------------------------------------------*/
+.single-interview{
+  .content-area{
+    .site-main{
+      .entry-header{
+        .entry-header-img{
+          background-image: url(./images/eyecatch/eye_member.jpg);
+        }
+      }
+      .interview-header{
+        width: 90%;
+        margin: 2em auto 0 auto;
+        position: relative;
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        @media only screen and (min-width: 1120px ) {
+          width: 900px;
+          img{
+            width: 100%;
+          }
+        }
+        .interview-header-ttl{
+          .interview-title{
+            font-weight: normal;
+            margin: 1.5em 0 0.5em 0;
+            font-size: 1.2em;
+            line-height: 1.3;
+          }
+          .interview-header-description{
+            margin: 0 0 1em 0;
+            .catchcopy{
+              padding: 0.5em 0;
+              border-bottom: 1px solid $gray-color;
+              font-size: 1.1em;
+            }
+            .history{
+              padding: 0.5em 0;
+              border-bottom: 1px solid $gray-color;
+            }
+          }
+          @media only screen and (min-width: $min-width ) {
+            position: absolute;
+            width: 55%;
+            top:0;
+            right:2em;
+            color: #fff;
+            .interview-header-description{
+              .history{
+                border-bottom: none;
+              }
+            }
+          }
+          @media only screen and (min-width: 1120px ) {
+            top:1em;
+            .interview-title{
+              font-size: 1.4em;
+            }
+            .interview-header-description{
+              .catchcopy{
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+      }
+      .interview-content{
+        @media only screen and (min-width: $min-width ) {
+          display: flex;
+          width: 90%;
+          margin: 1em auto;
+          .entry-content{
+            width: 560px;
+            padding-right: 2em;
+            box-sizing: border-box;
+          }
+          .profile{
+            width: 200px;
+            padding-top: 2em;
+            font-size: 0.9em;
+          }
+        }
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        @media only screen and (min-width: 1120px ) {
+          width: 900px;
+          .entry-content{
+            width: 670px;
+            padding-right: 3em;
+            .aligncenter{
+              width: 100%;
+              img{
+                width: 100%;
+              }
+            }
+          }
+          .profile{
+            width: 230px;
+          }
+        }
+        .entry-content{
+          h3{
+            strong{
+              color: $main-color;
+            }
+          }
+        }
+        .profile{
+          @media only screen and (max-width: $max-width ) {
+            width: 90%;
+            margin: 0 auto;
+            border-top: 2px solid $gray-color;
+            margin: 1em auto;
+            padding-top: 1em;
+          }
+          .profile-img{
+            text-align: center;
+          }
+          .profile-txt{
+            .hobby, .motto{
+              h4{
+                margin: 0.5em 0;
+                padding: 0;
+              }
+              p{
+                margin: 0 0 0.5em 0.5em;
+              }
+            }
+          }
+          .schedule{
+            background: $gray-color;
+            padding-bottom: 1em;
+            .schedule-ttl{
+              margin: 0;
+              padding: 0.5em 0;
+              display: block;
+              background: lighten($btn-color,15%);
+              text-align: center;
+            }
+            dl{
+              padding: 0;
+              margin: 1em;
+              dd{
+                padding: 0 0 0.2em 1.5em;
+                margin: 0 0 0.3em 0;
+                border-bottom: 1px solid #ddd;
+              }
+            }
+          }
+        }
+      }
+      .interview-btn{
+        margin: 2em auto;
+        position: relative;
+        .interview-btn-image{
+          width: 100%;
+        }
+        .interview-btn-txt{
+          width: 90%;
+          margin: 0 auto;
+          font-weight: bold;
+          font-size: 1.1em;
+          line-height: 1.3;
+          .btn{
+            a{
+              display: block;
+              background: $btn-color;
+              text-align: center;
+              margin: 1em auto;
+              max-width: 90%;
+              text-decoration: none;
+              border-radius: 3px;
+              padding: 1em 0;
+            }
+          }
+          @media only screen and (max-width: $max-width ) {
+            .btn{
+              position: relative;
+              a{
+                position: absolute;
+                top: 10%;
+                left: 1em;
+                width: 180px;
+                margin:0;
+                padding: 0.5em 0;
+              }
+            }
+          }
+        }
+        @media only screen and (min-width: $min-width ) {
+          width: 90%;
+          .interview-btn-txt{
+            position: absolute;
+            width: 70%;
+            font-size: 1.08em;
+            top:0;
+            left:1em;
+            text-align: left;
+            color: #fff;
+            font-weight: normal;
+            p{
+              margin: 1em 0;
+            }
+            .btn{
+              a{
+                text-align: left;
+                display: inline-block;
+                margin:0;
+                padding: 0.5em 2em ;
+                font-weight: bold;
+                &:hover{
+                  background: rgba($btn-color,0.8);
+                  transition: 0.2s;
+                }
+              }
+            }
+          }
+        }
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        @media only screen and (min-width: 1120px ) {
+          width: 900px;
+          .interview-btn-txt{
+            width: 60%;
+            font-size: 1.2em;
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Talk
+--------------------------------------------------------------*/
+.box-talk{
+  .box-ttl{
+    background: url(./images/member/ttl_talk.png) right top no-repeat;
+    min-height: 105px;
+    padding: 1em 120px 0 0;
+    text-align: left;
+    max-width: 500px;
+    @media only screen and (max-width: $max-width ) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.page-template-page-talk-php{
+  .content-area{
+    .site-main{
+      .entry-header{
+        .entry-header-img{
+          background-image: url(./images/eyecatch/eye_talk01.jpg);
+        }
+      }
+      .talk-profile{
+        width: 90%;
+        margin: 2em auto 0 auto;
+        @media only screen and (min-width: $min-width ) {
+          width: 90%;
+          .talk-profile-card{
+            display: flex;
+            .talk-profile-card-item{
+              width: 31%;
+              margin: 1%;
+            }
+          }
+        }
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        .talk-profile-card{
+          .talk-profile-card-item{
+            margin-bottom: 2em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid $gray-color;
+            .talk-profile-card-item-img{
+              text-align: center;
+              margin: 0 auto;
+              img{
+                border-bottom: 10px solid $gray-color;
+              }
+            }
+            &.talk-profile-card-item01{
+              .talk-profile-card-item-img{
+                img{
+                  border-color:#d3e4ff;
+                }
+              }
+            }
+            &.talk-profile-card-item02{
+              .talk-profile-card-item-img{
+                img{
+                  border-color:#ffe8c8;
+                }
+              }
+            }
+            &.talk-profile-card-item03{
+              .talk-profile-card-item-img{
+                img{
+                  border-color:#c7e9c8;
+                }
+              }
+            }
+            .talk-profile-card-item-content{
+              .talk-profile-card-item-name{
+                font-size: 1.1em;
+                font-weight: bold;
+                text-align: center;
+              }
+              .talk-profile-card-item-txt{
+                font-size: 0.9em;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+      .talk-index-ttl{
+        text-align: center;
+      }
+      .talk-index{
+        width: 90%;
+        margin: 2em auto 0 auto;
+        border-top: 1px dotted $gray-color;
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        .talk-index-item{
+          border-bottom: 1px dotted $gray-color;
+          font-size: 1.2em;
+          font-weight: bold;
+          a{
+            text-decoration: none;
+            padding: 0.6em 0;
+            display: flex;
+            align-items: flex-start;
+            @media only screen and (min-width: $min-width ) {
+              align-items: center;
+            }
+            &:hover{
+              background: lighten($gray-color,5%);
+              transition: 0.2s;
+            }
+          }
+          .talk-index-num{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background: $gray-color;
+            padding: 0.7em 0 0 0;
+            text-align: center;
+            margin-right: 1em;
+          }
+          &.current{
+            .talk-index-num{
+              background-color: $sub-color;
+            }
+          }
+          .talk-index-txt{
+            display: inline-block;
+            @media only screen and (max-width: $max-width ) {
+              font-size: 0.8em;
+            }
+
+          }
+        }
+      }
+      .talk-content{
+        width: 90%;
+        margin: 2em auto 1em auto;
+        padding: 4em 0 2em 0 ;
+        border-bottom: 2px solid $gray-color;
+        @media only screen and (min-width: 900px ) {
+          width: 760px;
+        }
+        h2{
+          @media only screen and (max-width: $max-width ) {
+            font-size: 1em;
+          }
+        }
+        .icon{
+          padding:0 0 0 1em  ;
+          margin: 2em 0 2em 50px;
+          min-height: 40px;
+          position: relative;
+          border-left: 5px solid;
+          strong{
+            font-size: 1.2em;
+            font-weight: bold;
+            @media only screen and (min-width: $min-width ) {
+              font-size: 1.4em;
+            }
+          }
+          &::before{
+            content: '.';
+            color: #fff;
+            text-indent: -100px;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: -50px;
+            z-index: 100;
+          }
+          @media only screen and (min-width: $min-width ) {
+            padding: 0 2em 0 1em ;
+            margin: 2em 0  2em 90px;
+            min-height: 80px;
+            &::before{
+              width:70px;
+              height: 70px;
+              left: -100px;
+            }
+          }
+        }
+        .icon01{
+          border-color:#d3e4ff;
+          &::before{
+            background: url(./images/member/talk01/icon01.png) left top no-repeat;
+            background-size: contain;
+          }
+        }
+        .icon02{
+          border-color:#ffe8c8;
+          &::before{
+            background: url(./images/member/talk01/icon02.png) left top no-repeat;
+            background-size: contain;
+          }
+        }
+        .icon03{
+          border-left: none;
+          border-right: 5px solid #c7e9c8;
+          margin: 2em 50px 2em 0 ;
+          padding: 0 1em 0 0;
+          &::before{
+            background: url(./images/member/talk01/icon03.png) right top no-repeat;
+            background-size: contain;
+            left: auto;
+            right: -50px;
+            text-indent: 50px;
+          }
+          @media only screen and (min-width: $min-width ) {
+            padding: 0 1em 0 2em;
+            margin: 2em 90px 2em 0 ;
+            text-align: right;
+            &::before{
+              width:70px;
+              height: 70px;
+              right: -100px;
+              text-indent: 100px;
+            }
+          }
+        }
+        .icon0203{
+          border: none;
+          margin: 2em auto 2em 30%;
+          display: inline-block;
+          text-align: center;
+          font-size: 1.2em;
+          font-weight: bold;
+          &::before{
+            background: url(./images/member/talk01/icon02.png) right top no-repeat;
+            background-size: contain;
+            left: -50px;
+          }
+          &::after{
+            content: '.';
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            text-indent: 50px;
+            background: url(./images/member/talk01/icon03.png) right top no-repeat;
+            background-size: contain;
+            position: absolute;
+            top:0;
+            left: auto;
+            right: -50px;
+          }
+          @media only screen and (min-width: $min-width ) {
+            padding: 0;
+            margin: 2em auto 2em 40%;
+            font-size: 1.4em;
+            &::before{
+              width:70px;
+              height: 70px;
+              left: -100px;
+            }
+            &::after{
+              width:70px;
+              height: 70px;
+              right: -100px;
+              text-indent: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

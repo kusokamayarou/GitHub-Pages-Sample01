@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# Function
+--------------------------------------------------------------*/
+
+@mixin width1200 {
+	max-width: 1200px;
+	margin: 0 auto;
+	@media only screen and (max-width: 1199px ) {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}
+
+$font: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$font-serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$main-color: #eb8f00;
+$sub-color: #f7ce91;
+$btn-color: #ffc22e;
+$txt-color: #3e3a39;
+$gray-color: #eaeaea;
+$bg-color: #42210b;
+
+$max-width: 767px;
+$min-width: 768px;
