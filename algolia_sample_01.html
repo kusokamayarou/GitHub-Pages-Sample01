@@ -104,8 +104,8 @@
         <div class="search-panel">
             <div class="left-panel">
                 <h2>フィルター: 著者名</h2>
-                <div id="currentRefinements"></div>
-                <div id="refinementList"></div>
+                <!--div id="currentRefinements"></div-->
+                <!--div id="refinementList"></div-->
             </div>
             <div class="right-panel">
                 <div id="searchbox"></div>
@@ -167,16 +167,15 @@
             instantsearch.widgets.pagination({
                 container: '#pagination',
             }),
-
-            instantsearch.widgets.currentRefinements({
-                container: "#currentRefinements"
-            }),
-            instantsearch.widgets.refinementList({
-                container: "#refinementList",
-                attribute: "authors",
-                searchable: true,
-                showMore: true,
-            }),
+            //instantsearch.widgets.currentRefinements({
+            //    container: "#currentRefinements"
+            //}),
+            //instantsearch.widgets.refinementList({
+            //    container: "#refinementList",
+            //    attribute: "authors",
+            //    searchable: true,
+            //    showMore: true,
+            //}),
         ]);
 
         search.start();
