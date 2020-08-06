@@ -109,11 +109,7 @@
             </div>
             <div class="right-panel">
                 <div id="searchbox"></div>
-                
                 <!--input id="searchBox" /-->
-                
-                
-                
                 <div id="stats"></div>
                 <div id="hits"></div>
                 <div id="pagination" class="text-center"></div>
@@ -165,8 +161,8 @@
                 templates: {
                     /*empty: noResultsTemplate,*/
                     /*item: hitTemplate,*/
-                    empty: '',
-                    item: 'aaaa',
+                    empty: 'empty',
+                    item: 'item',
                 },
             }),
             instantsearch.widgets.pagination({
@@ -186,8 +182,6 @@
         search.start();
     </script>
     
-    <!--script src="https://polyfill.io/v3/polyfill.min.js"></script-->
-    <!--script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Array.prototype.find"></script-->
 </body>
 
 </html>
