@@ -9,21 +9,12 @@
 </head>
 
 <body>
-<h1>
-<a href="https://github.com/algolia/instantsearch.js/">instantsearch.js</a>: displaying hits from multiple indexes
-</h1>
-<p>
-Sum of products and movies results: <span>RESULTS HERE</span>
-</p>
-<label>search: <input id="searchBox" /></label>
-<h2>
-Movies
-</h2>
-<div id="movies"></div>
-<h2>
-Products
-</h2>
-<div id="products"></div>
+
+    <h1><a href="https://github.com/algolia/instantsearch.js/">instantsearch.js</a>: displaying hits from multiple indexes</h1>
+    <p>Sum of products and movies results: <span>RESULTS HERE</span></p>
+    <label>search: <input id="searchBox" /></label>
+    <h2>Movies</h2>
+    <div id="movies"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js"
         integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
@@ -33,32 +24,31 @@ Products
     
 <script>
 
-var movies = instantsearch({
-    appId: 'N03TVBMKE5',
-  apiKey: '15b9f10500e5f6b1501e4709c29182ff',
-  indexName: 'kindleLibrary',
-  searchFunction: function(helper) {
-    var query = movies.helper.state.query;
-    products.helper.setQuery(query);
-    products.helper.search();
-    helper.search();
-  }
-});
-var moviesHits = instantsearch.widgets.hits({
-    container: document.querySelector('#movies'),
-  hitsPerPage: 3,
-  templates: {
-      item: 'aaaa'
-  }
-});
+    var movies = instantsearch({
+        appId: 'N03TVBMKE5',
+        apiKey: '15b9f10500e5f6b1501e4709c29182ff',
+        indexName: 'kindleLibrary',
+        searchFunction: function(helper) {
+            helper.search();
+        }
+    });
 
-var searchBox = instantsearch.widgets.searchBox({
-  container: document.querySelector('#searchBox')
-});
+    var moviesHits = instantsearch.widgets.hits({
+        container: document.querySelector('#movies'),
+        hitsPerPage: 3,
+        templates: {
+            empty: '',
+            item: 'aaaa',
+        }
+    });
 
-movies.addWidget(moviesHits);
-movies.addWidget(searchBox);
-movies.start();
+    var searchBox = instantsearch.widgets.searchBox({
+        container: document.querySelector('#searchBox')
+    });
+
+    movies.addWidget(moviesHits);
+    movies.addWidget(searchBox);
+    movies.start();
 
 </script>
 
