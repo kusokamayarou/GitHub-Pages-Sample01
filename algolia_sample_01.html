@@ -110,10 +110,7 @@
             <div class="right-panel">
                 <div id="searchbox"></div>
                 
-                
-                <label>Algolia search (full text):
-  <input id="searchBox" />
-</label>
+                <input id="searchBox" />
                 
                 
                 
@@ -137,17 +134,7 @@
             searchClient: algoliasearch('N03TVBMKE5', '15b9f10500e5f6b1501e4709c29182ff'),
             routing: true,
         });
-
-        search.addWidgets([
-            instantsearch.widgets.searchBox({
-                container: '#searchbox',
-            }),
-
-            instantsearch.widgets.stats({
-                container: '#stats',
-            }),
-        ]);
-
+        
         var hitTemplate = `
                   <article>
                     <div class="bookimage"><img src={{productImageUrl}} /></div>
@@ -164,6 +151,13 @@
             '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
 
         search.addWidgets([
+            instantsearch.widgets.searchBox({
+                /*container: '#searchbox',*/
+                container: document.querySelector('#searchBox'),
+            }),
+            instantsearch.widgets.stats({
+                container: '#stats',
+            }),
             instantsearch.widgets.hits({
                 container: '#hits',
                 hitsPerPage: 10,
