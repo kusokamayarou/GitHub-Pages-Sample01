@@ -152,15 +152,15 @@
 
         search.addWidgets([
             instantsearch.widgets.searchBox({
-                /*container: '#searchbox',*/
-                container: document.querySelector('#searchBox'),
+                container: '#searchbox',
+                /*container: document.querySelector('#searchBox'),*/
             }),
             instantsearch.widgets.stats({
                 container: '#stats',
             }),
             instantsearch.widgets.hits({
-                /*container: '#hits',*/
-                container: document.querySelector('#hits'),
+                container: '#hits',
+                /*container: document.querySelector('#hits'),*/
                 hitsPerPage: 10,
                 templates: {
                     /*empty: noResultsTemplate,*/
