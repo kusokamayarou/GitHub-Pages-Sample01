@@ -110,7 +110,7 @@
             <div class="right-panel">
                 <div id="searchbox"></div>
                 
-                <input id="searchBox" />
+                <!--input id="searchBox" /-->
                 
                 
                 
@@ -159,7 +159,8 @@
                 container: '#stats',
             }),
             instantsearch.widgets.hits({
-                container: '#hits',
+                /*container: '#hits',*/
+                container: document.querySelector('#hits'),
                 hitsPerPage: 10,
                 templates: {
                     /*empty: noResultsTemplate,*/
