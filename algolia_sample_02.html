@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+    </style>
+</head>
+
+<body>
+<h1>
+<a href="https://github.com/algolia/instantsearch.js/">instantsearch.js</a>: displaying hits from multiple indexes
+</h1>
+<p>
+Sum of products and movies results: <span>RESULTS HERE</span>
+</p>
+<label>search: <input id="searchBox" /></label>
+<h2>
+Movies
+</h2>
+<div id="movies"></div>
+<h2>
+Products
+</h2>
+<div id="products"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js"
+        integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js"
+        integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script>
+    
+<script>
+
+var movies = instantsearch({
+    appId: 'latency',
+  apiKey: '6be0576ff61c053d5f9a3225e2a90f76',
+  indexName: 'movies',
+  searchFunction: function(helper) {
+    var query = movies.helper.state.query;
+    products.helper.setQuery(query);
+    products.helper.search();
+    helper.search();
+  }
+});
+
+var products = instantsearch({
+    appId: 'latency',
+  apiKey: '6be0576ff61c053d5f9a3225e2a90f76',
+  indexName: 'ikea'
+});
+
+var productsHits = instantsearch.widgets.hits({
+    container: document.querySelector('#products'),
+  hitsPerPage: 3,
+  templates: {item: '{{{_highlightResult.name.value}}}'}
+});
+
+var moviesHits = instantsearch.widgets.hits({
+    container: document.querySelector('#movies'),
+  hitsPerPage: 3,
+  templates: {item: '{{{_highlightResult.title.value}}}'}
+});
+
+var searchBox = instantsearch.widgets.searchBox({
+  container: document.querySelector('#searchBox')
+});
+
+movies.addWidget(moviesHits);
+movies.addWidget(searchBox);
+products.addWidget(productsHits);
+products.start();
+movies.start();
+
+</script>
+
+</body>
+
+</html>
