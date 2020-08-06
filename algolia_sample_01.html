@@ -96,7 +96,10 @@
         }
     </style>
     
-    <script>window.Promise || document.write('<script src="//www.promisejs.org/polyfills/promise-7.0.4.min.js"><\/script>');</script>
+    <!--script>window.Promise || document.write('<script src="//www.promisejs.org/polyfills/promise-7.0.4.min.js"><\/script>');</script-->
+    
+    <!-- webpackでPromiseを使用する(IE対策) - Qiita https://qiita.com/gdtypk/items/1ec4c8e895b0a9a5c0c2 -->
+    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js"
             integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js"
