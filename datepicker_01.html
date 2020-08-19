@@ -1,42 +1,26 @@
-
-
-<!-- Kindle Library の蔵書をAlgoliaで検索する - Qiita https://qiita.com/t2hnd/items/88ceb9e2177197286432 -->
-
 <!-- https://kusokamayarou.github.io/GitHub-Pages-Sample01/datepicker_01.html -->
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
- <head>
-  <title>他の場所からでも分かるタイトル</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<html>
+
+<head>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
   
   <script>
-   $('#datepicker').datepicker();
+    $(function() {
+      $( "#datepicker" ).datepicker();
+      //$("#datepicker").datepicker("option", "dateFormat", 'y/m/d');//->18/2/9 
+      //$("#datepicker").datepicker("option", "dateFormat", 'yy/mm/dd');//->2018/02/20
+      $("#datepicker").datepicker("option", "dateFormat", 'yy-mm-dd');//->2018-02-20
+    });
   </script>
- </head>
- <body>
+</head>
 
-  <p><img src="welcome.gif" alt="いらっしゃいませ" /></p>
+<body>
+カレンダー<input type="text" id="datepicker" />
+</body>
 
-  <h1>文書の主見出し</h1>
-
-  <p>意味のまとまりのある段落を書こう</p>
-  
-  <input type="text" id="datepicker">
-
-  <ul>
-   <li>内容をリストとして</li>
-   <li>列挙してもよい</li>
-   <li><a href="http://www.kanzaki.com/">役立つ情報</a>にリンクもできる</li>
-  </ul>
-
-  <hr />
-  <footer>
-   <address>
-    何某作;  
-    <a href="mailto:yourmail@domain.com">作者へのメッセージ</a>
-   </address>
-   20YY-MM-DD更新
-  </footer>
- </body>
 </html>
+
